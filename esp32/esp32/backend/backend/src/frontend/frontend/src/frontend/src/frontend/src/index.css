@@ -1,0 +1,180 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f7fb;
+  color: #172033;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+header {
+  background: #0b3954;
+  color: white;
+  padding: 25px 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0 0 8px;
+}
+
+header p {
+  margin: 0;
+  opacity: 0.8;
+}
+
+.status {
+  font-weight: bold;
+}
+
+.connected {
+  color: #7cff9b;
+}
+
+.disconnected {
+  color: #ff8a8a;
+}
+
+main {
+  width: 88%;
+  max-width: 1200px;
+  margin: 30px auto;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.sensor-card {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.sensor-card h3 {
+  margin-top: 0;
+}
+
+.sensor-value {
+  font-size: 38px;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+.sensor-value small {
+  font-size: 18px;
+  margin-left: 5px;
+}
+
+.sensor-card span {
+  color: #667085;
+}
+
+.panel {
+  background: white;
+  margin-top: 25px;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+}
+
+.panel h2 {
+  margin-top: 0;
+}
+
+.status-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.status-item {
+  padding: 18px;
+  border: 1px solid #e4e7ec;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.status-item div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.safe {
+  color: #138a36;
+}
+
+.danger {
+  color: #d92d20;
+}
+
+.prediction {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.prediction div {
+  padding: 20px;
+  background: #f5f8fc;
+  border-radius: 10px;
+}
+
+.prediction strong,
+.prediction span {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #e4e7ec;
+}
+
+.alert {
+  padding: 15px;
+  margin-bottom: 10px;
+  background: #fff1f0;
+  border-left: 4px solid #d92d20;
+  display: flex;
+  gap: 20px;
+}
+
+@media (max-width: 800px) {
+
+  .cards,
+  .status-grid,
+  .prediction {
+    grid-template-columns: 1fr;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+}
